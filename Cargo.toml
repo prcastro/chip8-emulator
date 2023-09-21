@@ -5,6 +5,20 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+
+
+[dependencies.sdl2]
+version = "0.35"
+default-features = false
+features = ["ttf","image","gfx","mixer","static-link","use-vcpkg"]
+
+[package.metadata.vcpkg]
+dependencies = ["sdl2", "sdl2-image[libjpeg-turbo,tiff,libwebp]", "sdl2-ttf", "sdl2-gfx", "sdl2-mixer"]
+git = "https://github.com/microsoft/vcpkg"
+rev = "7476f0d4e77d3333fbb249657df8251c28c4faae"
+
+[package.metadata.vcpkg.target]
+x86_64-pc-windows-msvc = { triplet = "x64-windows-static-md" }
+
 [dependencies]
 rand = "0.8.5"
-sdl2 = "0.35"
