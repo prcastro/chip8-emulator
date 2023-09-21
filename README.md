@@ -6,7 +6,19 @@ Simple CHIP-8 emulator written in Rust. Includes a bunch of public domain ROMs f
 ## Getting started
 
 ### Windows
-Download the .exe file from the relase page on Github and drag a ROM file on top of the executable to play it.
+Download the .exe file from the relase page on Github and drag a ROM file on top of the executable to play it. Alternatively, run from `cmd`:
+
+```
+chip8-emulator-x64-win path\to\rom
+```
+
+### macOS
+
+Download the macos binary from the relase page on Github and run from a terminal:
+
+```
+./chip8-emulator-aarch64-macos path/to/rom
+```
 
 ### Controls
 The original controls:
